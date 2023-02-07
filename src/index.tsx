@@ -10,6 +10,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+const Inicio = lazy(() => (import('./telas/Inicio')));
 
 root.render(
   <BrowserRouter>
@@ -18,7 +19,7 @@ root.render(
     </Backdrop>}>
       <Routes>
         <Route path={'/'} element={<App/>}>
-
+          <Route index element={<Inicio/>}/>
         </Route>
       </Routes>
     </Suspense>

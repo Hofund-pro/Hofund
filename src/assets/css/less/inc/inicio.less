@@ -1,50 +1,26 @@
 .inicio {
   width: 100%;
   height: 100vh;
-  background-color: #32374f;
+  background-color: var(--pallet-blue-dark);
+  overflow: hidden;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-
-  .imagem {
-    width: 40%;
-    border-radius: 10px;
+  .moldura {
+    width: calc(100% - 40px);
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    padding: 10px;
-    background-color: #20264b;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    background: rgb(51,108,172);
+    background: linear-gradient(25deg, rgba(51,108,172,1) 0%, rgba(64,112,166,1) 30%, rgba(231,170,83,1) 80%, rgba(249,176,74,1) 100%);
 
     img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-  }
-
-  .links {
-    width: 40%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    .link {
-      display: flex;
-      align-items: center;
-      height: 50px;
-      background-color: #20264b;
-      border-radius: 10px;
-      color: #eaeaea;
-
-      .icone {
-        width: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .titulo {
-        width: 80%;
-      }
+      width: 100%;
+      height: 100%;
+      z-index: 2;
     }
   }
 }
